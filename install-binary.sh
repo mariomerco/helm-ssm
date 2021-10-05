@@ -45,7 +45,7 @@ verifySupported() {
   local supported="linux-amd64\nmacos-amd64\nwindows-amd64"
   if ! echo "${supported}" | grep -q "${OS}-${ARCH}"; then
     echo "No prebuild binary for ${OS}-${ARCH}."
-    exit 1
+    # exit 1
   fi
 
   if ! type "curl" > /dev/null && ! type "wget" > /dev/null; then
